@@ -1,0 +1,19 @@
+
+<div class="main-div">
+    <div class="main-panel" id="scroll">
+        <div class="active" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50"
+            [infiniteScrollContainer]=" '.main-panel' " [fromRoot]="true" [scrollWindow]="true" (scrolled)="onScroll()">
+            <div *ngFor="let item of data let i = index;">
+                
+                <div class="submenu" style="display: none; position: relative; float: right;" id='showsubmenu_{{i}}'>
+                    <div *ngFor="let sub of submenuData let j = index">
+                        <div class="sub_list_data" (click)="onCLickMenu(sub,j)">{{sub.id}}</div>
+                    </div>
+                </div>
+                <div class="triangle-up"></div>
+                <div class="list_data" (click)="showSubMenu(item.list,i)">{{item.main_id}}</div>
+    
+            </div>
+        </div>
+    </div>
+</div>

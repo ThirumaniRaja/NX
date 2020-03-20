@@ -1,0 +1,36 @@
+.main-panel {
+    height: 600px;
+    width: 300px;
+    overflow-y: scroll;
+  }
+
+  .list_data {
+    font-size: 18px;
+    height:40px;
+    width: 40px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+    border: solid 1px;
+  }
+  .triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #2b9eaa8f;
+    position: absolute;
+    top: -10px;
+    right: 85px;
+  }
+  .sub_list_data{
+    font-size: 12px;
+    height:15px;
+    width: 50px;
+    padding: 10px;
+    text-align: center;
+    margin: 2px;
+    border: solid 1px;
+  }
+
+  

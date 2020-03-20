@@ -1,0 +1,35 @@
+<div class="main-div" id ="main_div">
+    <div class="main-panel" id="main_panel">
+        <div class="active"  infiniteScroll [infiniteScrollDistance]="0.001" [infiniteScrollThrottle]="50"
+            [infiniteScrollContainer]=" '.main-panel' " [fromRoot]="true" [scrollWindow]="false" [alwaysCallback]="true"
+            (scrolled)="onScroll()">
+            <div  id="scroll" *ngFor="let item of data let i = index;">
+
+                <div class="submenu" style="display: none; position: relative; float: right;" id='showsubmenu_{{i}}'>
+                    <div *ngFor="let sub of submenuData let j = index">
+                        <div class="triangle-side"></div>
+                        <div class="sub_list_data" id ="sb_menu{{i}}{{j}}" (click)="onCLickMenu(sub,i,j)" style="background-color: white;">{{sub.id}}</div>
+                    </div>
+                </div>
+                
+                <div class="list_data" id="main_menu{{i}}" (click)="showSubMenu(item.list,i)">{{i}}</div>
+                
+
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="footer">
+    <div class="triangle-side"></div>
+    <span class="footer_spn" id="left" style="position: relative; float: left;" (click)="onClickLeft()">
+        <i class="material-icons">
+            keyboard_arrow_left
+        </i>
+    </span>
+    <span class="footer_spn" id="right" style="position: relative; float: right;" (click)="onClickRight()">
+        <i class="material-icons">
+            keyboard_arrow_right
+        </i>
+    </span>
+</div>
