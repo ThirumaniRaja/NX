@@ -5,3 +5,25 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-dialog-container{
     background-color: aquamarine !important;
 }
+
+::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  /* Track */
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  
+  ::-webkit-scrollbar-thumb {
+    background: #cecece;
+  }
+  
+  /* Handle on hover */
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #dedede;
+  }

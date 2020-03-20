@@ -102,11 +102,11 @@ export class ViewContentComponent implements OnInit {
   }
 
   onClickLeft() {
-    document.getElementById('main_panel').setAttribute("style","position:relative; float: left");
+    document.getElementById('main_panel').setAttribute("style","position:relative; float: left;");
   }
 
   onClickRight() {
-    document.getElementById('main_panel').setAttribute("style","position:relative; float: right");
+    document.getElementById('main_panel').setAttribute("style","position:relative; float: right;");
     }
 
 }
