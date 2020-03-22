@@ -1,19 +1,34 @@
-
-<div class="main-div">
-    <div class="main-panel" id="scroll">
-        <div class="active" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50"
-            [infiniteScrollContainer]=" '.main-panel' " [fromRoot]="true" [scrollWindow]="true" (scrolled)="onScroll()">
-            <div *ngFor="let item of data let i = index;">
-                
-                <div class="submenu" style="display: none; position: relative; float: right;" id='showsubmenu_{{i}}'>
+<div class="main-div" id ="main_div">
+    <div class="main-panel" id="main_panel">
+        <div id = "active_scroll" class="active"  infiniteScroll [infiniteScrollDistance]="0.001" [infiniteScrollThrottle]="50" [immediateCheck] = "false"
+            [infiniteScrollContainer]=" '.main-panel' " [fromRoot]="true" [scrollWindow]="false" [alwaysCallback]="true"
+            (scrolled)="onScroll()">
+            <div  id="scroll" *ngFor="let item of data let i = index;">
+                <div [ngClass]="{'submenu': rightview ==='initial','rc_submenu': rightview ==='right','toggle_menu':rightview ==='left'}" style="display: none ;" id='showsubmenu_{{i}}'>
                     <div *ngFor="let sub of submenuData let j = index">
-                        <div class="sub_list_data" (click)="onCLickMenu(sub,j)">{{sub.id}}</div>
+                        <div class="sub_list_data" id ="sb_menu{{i}}{{j}}" (click)="onCLickMenu(sub,i,j)" style="background-color: white;">{{sub.id}}</div>
+                        <div [ngClass]=" arrow ? 'triangle-rig' : 'triangle-side'"></div>
                     </div>
                 </div>
-                <div class="triangle-up"></div>
-                <div class="list_data" (click)="showSubMenu(item.list,i)">{{item.main_id}}</div>
-    
+                <div [ngClass]="{'list_data': item.showon !=='start' && 'end','start_list': item.showon==='start','end_list':item.showon==='end'}" id="main_menu{{i}}" (click)="showSubMenu(item.showon,item.list,i)">{{item.showon}}{{i}}</div>
             </div>
         </div>
     </div>
+    
+</div>
+<div class="footer">
+    <span class="footer_spn" id="left" style="position: relative; float: left;" (click)="onClickLeft()">
+        <i class="material-icons">
+            keyboard_arrow_left
+        </i>
+        <div class="left-menu-text">move menubar left</div>
+    </span>
+    
+
+    <span class="footer_spn" id="right" style="position: relative; float: right;" (click)="onClickRight()">
+        <i class="material-icons">
+            keyboard_arrow_right
+        </i>
+        <div class="right-menu-text">move menuber right</div> 
+    </span>
 </div>

@@ -1,6 +1,6 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { DialogComponent } from '../dialog/dialog.component';
+import { Component, OnInit, Inject, ViewChild } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MenubarComponent } from '../menubar/menubar/menubar.component';
 
 @Component({
   selector: 'app-main-content',
@@ -9,10 +9,18 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class MainContentComponent implements OnInit {
 
-  constructor() { }
+  message;
+
+  constructor() { 
+  }
 
     ngOnInit(): void {
-      
+      this.message = localStorage.setItem('nav','start')
+    }
+
+
+    ngDoCheck(){
+      this.message = localStorage.getItem("nav")
     }
     
 }

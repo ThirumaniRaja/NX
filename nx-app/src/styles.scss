@@ -6,6 +6,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     background-color: aquamarine !important;
 }
 
+.mat-drawer-inner-container{
+  overflow: none !important;
+}
+
 ::-webkit-scrollbar {
     width: 0px;
   }

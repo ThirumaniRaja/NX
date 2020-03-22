@@ -1,7 +1,12 @@
 <mat-drawer-container class="example-container">
-    <mat-drawer mode="side" opened>
+    <mat-drawer-content style="overflow: hidden;"><h1 style="text-align: center;">Content Window</h1>
+    </mat-drawer-content>
+
+    <mat-drawer mode="side" opened position = {{message}}>
+        <h1 *ngIf = "message ==='start'" style="text-align: center;">Menubar Left view</h1>
+        <h1 *ngIf = "message ==='end'" style="text-align: center;">Menubar Right view</h1>
         <app-menubar></app-menubar>
     </mat-drawer>
-    <mat-drawer-content>content window
-    </mat-drawer-content>
+    
   </mat-drawer-container>
+

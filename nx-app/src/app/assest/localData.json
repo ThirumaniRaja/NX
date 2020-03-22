@@ -1,6 +1,7 @@
 [
     {
         "main_id": "1",
+        "showon":"start",
         "list": [
             {
                 "id": "1.1",
@@ -184,6 +185,7 @@
     },
     {
         "main_id": "7",
+        "showon":"end",
         "list": [
             {
                 "id": "7.1",
@@ -196,30 +198,6 @@
             {
                 "id": "7.3",
                 "message": "Most people who become infected experience mild illness and recover, but it can be more severe for others. Take care of your health and protect others"
-            },
-            {
-                "id": "7.4",
-                "message": "Stay aware of the latest information on the COVID-19 outbreak, available on the WHO website and through your national and local public health authority."
-            },
-            {
-                "id": "7.5",
-                "message": "Stay aware of the latest information on the COVID-19 outbreak, available on the WHO website and through your national and local public health authority."
-            },
-            {
-                "id": "7.6",
-                "message": "Stay aware of the latest information on the COVID-19 outbreak, available on the WHO website and through your national and local public health authority."
-            },
-            {
-                "id": "7.7",
-                "message": "Stay aware of the latest information on the COVID-19 outbreak, available on the WHO website and through your national and local public health authority."
-            },
-            {
-                "id": "7.8",
-                "message": "Stay aware of the latest information on the COVID-19 outbreak, available on the WHO website and through your national and local public health authority."
-            },
-            {
-                "id": "7.9",
-                "message": "Stay aware of the latest information on the COVID-19 outbreak, available on the WHO website and through your national and local public health authority."
             }
         ]
     },

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ViewContentComponent } from './view-content.component';
+import { CommondialogComponent } from './commondialog.component';
 
-describe('ViewContentComponent', () => {
-  let component: ViewContentComponent;
-  let fixture: ComponentFixture<ViewContentComponent>;
+describe('CommondialogComponent', () => {
+  let component: CommondialogComponent;
+  let fixture: ComponentFixture<CommondialogComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ViewContentComponent ]
+      declarations: [ CommondialogComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ViewContentComponent);
+    fixture = TestBed.createComponent(CommondialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

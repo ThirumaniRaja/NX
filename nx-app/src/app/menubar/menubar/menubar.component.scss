@@ -1,36 +1,130 @@
 .main-panel {
-    height: 600px;
-    width: 300px;
-    overflow-y: scroll;
-  }
+  height: 550px;
+  width: 300px;
+  overflow-y: scroll;
+}
 
-  .list_data {
-    font-size: 18px;
-    height:40px;
-    width: 40px;
-    padding: 20px;
-    text-align: center;
-    margin: 20px;
-    border: solid 1px;
-  }
-  .triangle-up {
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid #2b9eaa8f;
-    position: absolute;
-    top: -10px;
-    right: 85px;
-  }
-  .sub_list_data{
-    font-size: 12px;
-    height:15px;
-    width: 50px;
-    padding: 10px;
-    text-align: center;
-    margin: 2px;
-    border: solid 1px;
-  }
 
-  
+.list_data {
+  position: static;
+  background-color: white;
+  font-size: 18px;
+  height:40px;
+  width: 40px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px;
+  margin-top: 70px;
+  border: solid 1px;
+}
+.triangle-side {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 10px solid black;
+  border-bottom: 10px solid transparent;
+  position: absolute;
+  top: 30px;
+  right: 85px;
+}
+
+
+.sub_list_data{
+  font-size: 12px;
+  height:10px;
+  width: 50px;
+  padding: 10px;
+  text-align: center;
+  margin: 1px;
+  border: solid 1px;
+}
+
+.footer{
+  position: fixed;
+  position: fixed;
+ left: 0;
+ bottom: 0;
+ width: 100%;
+}
+
+.footer_spn{
+  height: 20px;
+  width: 20px;
+  padding: 5px;
+  text-align: center;
+  border: solid 1px;
+}
+
+.submenu{
+  margin-right: 96px;
+  position: relative;
+  float: right;
+}
+.rc_submenu{
+  position: absolute;
+  margin-left: -90px;
+  float: left;
+}
+
+.toggle_menu{
+  margin-right: -76px;
+  position: relative;
+  float: right;
+  display: block;
+}
+
+
+.triangle-rig {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 10px solid black;
+  border-bottom: 10px solid transparent;
+  position: absolute;
+  top: 30px;
+  left: 100px;
+}
+
+.left-menu-text{
+    position: relative;
+    font-size: 15px;
+    left: 35px;
+    top: -27px;
+    width: 150px;
+}
+
+.right-menu-text{
+    position: relative;
+    font-size: 15px;
+    right: 155px;
+    top: -27px;
+    width: 150px;
+}
+
+.start_list{
+  background-color: white;
+  font-size: 18px;
+  height:40px;
+  width: 40px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px;
+  border: solid 1px;
+  position: fixed; 
+  top: 15px;
+  margin-bottom: 25px;
+}
+
+.end_list{
+  background-color: white;
+  font-size: 18px;
+  height:40px;
+  width: 40px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px;
+  border: solid 1px;
+  position: fixed; 
+  bottom: 20px; 
+  margin-top: 25px;
+}
