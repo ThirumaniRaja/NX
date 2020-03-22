@@ -14,6 +14,7 @@ export class MenubarComponent implements OnInit {
   data = [];
   rightview = 'initial';
   submenuData = [];
+  menuview;
   ckindex: number = 0;
   dialogData;
   submenu_index: number = 0;
@@ -41,10 +42,9 @@ export class MenubarComponent implements OnInit {
   }
 
   showSubMenu(menuview,data, index) {
-    console.log(menuview)
+    this.menuview = menuview;
     this.submenu_index = index
     if (this.ckindex !== index) {
-      console.log("ck", this.ckindex)
       document.getElementById('showsubmenu_' + this.ckindex).style.display = 'none';
       document.getElementById('main_menu' + this.ckindex).style.backgroundColor = 'white';
     }
@@ -102,6 +102,7 @@ export class MenubarComponent implements OnInit {
     this.navigate = 'start';
     localStorage.setItem("nav", this.navigate);
     document.getElementById('active_scroll').setAttribute("style", "position:relative; float: left;");
+    this.onMenuViewHandle(this.menuview,this.submenu_index)
   }
 
   onClickRight() {
@@ -110,11 +111,11 @@ export class MenubarComponent implements OnInit {
     this.arrow = true;
     localStorage.setItem("nav", this.navigate);
     document.getElementById('active_scroll').setAttribute("style", "position:relative; float: right;");
+    this.onMenuViewHandle(this.menuview,this.submenu_index)
    
   }
 
   onMenuViewHandle(data,index){
-    console.log(data,index)
     if(this.rightview === 'right'){
       if(data === 'start'){
         document.getElementById('showsubmenu_' + index).setAttribute("style", "position:fixed;top:35px;");
@@ -123,7 +124,16 @@ export class MenubarComponent implements OnInit {
         document.getElementById('showsubmenu_'+index).setAttribute("style", "position: fixed;margin-right: 96px;top: 525px;");
       }
     }
-    else {
+    else if(this.rightview === 'left') {
+      if(data === 'start'){
+        document.getElementById('showsubmenu_' + index).setAttribute("style", "position:fixed;top:35px; left:125px");
+      }
+      else if(data === 'end'){
+        document.getElementById('showsubmenu_'+index).setAttribute("style", "position: fixed;margin-right: 96px;top: 525px;left: 125px;");
+      }
+    }
+
+    else if(this.rightview === 'initial') {
       if(data === 'start'){
         document.getElementById('showsubmenu_' + index).setAttribute("style", "position:fixed;top:35px; left:125px");
       }
@@ -132,9 +142,5 @@ export class MenubarComponent implements OnInit {
       }
     }
    
-  }
-
-  clearStaticView(){
-
   }
 }
