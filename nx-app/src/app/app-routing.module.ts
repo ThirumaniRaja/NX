@@ -4,7 +4,9 @@ import { MainContentComponent } from './main-content/main-content.component';
 
 
 const routes: Routes = [
-  {path: 'main', component :  MainContentComponent}
+  {path: '',component: MainContentComponent},
+  {path: 'main', component :  MainContentComponent},
+  
 ];
 
 @NgModule({
