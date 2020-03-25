@@ -1,8 +1,8 @@
 <div class="main-div" id ="main_div">
     <div class="main-panel" id="main_panel">
-        <div id = "active_scroll" class="active"  infiniteScroll [infiniteScrollDistance]="0.001" [infiniteScrollThrottle]="50" [immediateCheck] = "false"
+        <div id = "active_scroll" class="active"  infiniteScroll [infiniteScrollDistance]="0.001" [infiniteScrollUpDistance]='0.001' [infiniteScrollThrottle]="50" [immediateCheck] = "false"
             [infiniteScrollContainer]=" '.main-panel' " [fromRoot]="true" [scrollWindow]="false" [alwaysCallback]="true"
-            (scrolled)="onScroll()">
+            (scrolled)="onScroll()" (scrolledUp)="onScroll()">
             <div  id="scroll" *ngFor="let item of data let i = index;">
                 <div [ngClass]="{'submenu': rightview ==='initial','rc_submenu': rightview ==='right','toggle_menu':rightview ==='left'}" style="display: none ;" id='showsubmenu_{{i}}'>
                     <div *ngFor="let sub of submenuData let j = index">
